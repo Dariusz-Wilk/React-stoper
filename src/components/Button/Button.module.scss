@@ -1,0 +1,19 @@
+@import '../../styles/variables.scss';
+
+.button {
+	background: $color-main;
+	border: 0;
+	color: $color-light;
+	font-size: 18px;
+	padding: 12px 20px;
+	margin: 0 10px 10px 10px;
+	border-radius: 7px;
+	cursor: pointer;
+	font-weight: 700;
+	text-transform: uppercase;
+	transition: 0.4s;
+
+	&:hover {
+		background: $color-main-hover;
+	}
+}
