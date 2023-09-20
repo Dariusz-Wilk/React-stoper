@@ -1,8 +1,7 @@
 import styles from './Timer.module.scss';
 
 const Timer = ({ time }) => {
-	Math.floor();
-	const hours = Math.floor((time / 1000 / 60 / 60) % 60)
+	const hours = Math.floor((time / 1000 / 60 / 60) % 24)
 		.toString()
 		.padStart(2, '0');
 	const mins = Math.floor((time / 1000 / 60) % 60)

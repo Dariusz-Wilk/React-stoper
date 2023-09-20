@@ -9,18 +9,18 @@ const App = () => {
 	const [timer, setTimer] = useState(false);
 
 	useEffect(() => {
+		let intervalTimer;
 		//code on start
 		if (timer) {
-			const intervalTimer = setInterval(() => {
+			intervalTimer = setInterval(() => {
 				setTime(prevTime => prevTime + 100);
 			}, 100);
-
-			return () => {
-				//code on the end
-				clearInterval(intervalTimer);
-			};
 		}
-	});
+		return () => {
+			//code on the end component live
+			if (intervalTimer) clearInterval(intervalTimer);
+		};
+	}, [timer]);
 
 	const handleStart = () => {
 		setTimer(true);
